@@ -59,7 +59,7 @@ function Header() {
             selected={selectedIndex === 0}
             onClick={event => handleListItemClick(event, 0)}
           >
-            <ListItemText className={classes.listText} secondary="عنوان اول"/>
+            <ListItemText className={classes.listText} classes={{ secondary: selectedIndex === 0? classes.whiteColor: classes.grayColor }} secondary="عنوان اول"/>
             <ListItemIcon className={classes.iconContainer}>
               <img className='icon' src={selectedIndex === 0 ? men1active: men1} />
             </ListItemIcon>
@@ -71,7 +71,7 @@ function Header() {
             selected={selectedIndex === 1}
             onClick={event => handleListItemClick(event, 1)}
           >
-            <ListItemText className={classes.listText} secondary="عنوان ثاني"/>
+            <ListItemText className={classes.listText} classes={{ secondary: selectedIndex === 1? classes.whiteColor: classes.grayColor }} secondary="عنوان ثاني"/>
             <ListItemIcon className={classes.iconContainer}>
               <img className='icon' src={selectedIndex === 1 ? men2active: men2} />
             </ListItemIcon>
@@ -83,7 +83,7 @@ function Header() {
             selected={selectedIndex === 2}
             onClick={event => handleListItemClick(event, 2)}
           >
-            <ListItemText className={classes.listText} secondary="عنوان ثالث"/>
+            <ListItemText className={classes.listText} classes={{ secondary: selectedIndex === 2? classes.whiteColor: classes.grayColor }} secondary="عنوان ثالث"/>
             <ListItemIcon className={classes.iconContainer}>
               <img className='icon' src={selectedIndex === 2 ? men3active: men3} />
             </ListItemIcon>
@@ -95,7 +95,7 @@ function Header() {
             selected={selectedIndex === 3}
             onClick={event => handleListItemClick(event, 3)}
           >
-            <ListItemText className={classes.listText} secondary="عنوان رابع"/>
+            <ListItemText className={classes.listText} classes={{ secondary: selectedIndex === 3? classes.whiteColor: classes.grayColor }} secondary="عنوان رابع"/>
             <ListItemIcon className={classes.iconContainer}>
               <img className='icon' src={selectedIndex === 4 ? men4active: men4} />
             </ListItemIcon>
@@ -144,9 +144,15 @@ const useStyles = makeStyles({
     width: 10,
   },
   highlight: {
-    backgroundColor: 'red'
+    backgroundColor: 'red',
   },
   selected: {
     background: "#03a1fc"
-  }
+  },
+  whiteColor: {
+    color: '#ffffff'
+  },
+  grayColor: {
+    color: '#8f8f8f'
+  },
 });
