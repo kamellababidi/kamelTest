@@ -11,14 +11,14 @@ import men3 from '../../images/ic_menu3.svg'
 import men3active from '../../images/ic_menu3_active.svg'
 import men4 from '../../images/ic_menu4.svg'
 import men4active from '../../images/ic_menu4_active.svg'
-import { Container, Row, Col, Tab, ListGroup, Sonnet } from 'react-bootstrap';
+import alert from '../../images/ic_alert.svg'
+import menue from '../../images/ic_menu.svg'
+import search from '../../images/ic_search.svg'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { FixedSizeList } from 'react-window';
-import StarIcon from '@material-ui/icons/Star';
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 })
@@ -97,7 +97,7 @@ function Header() {
           >
             <ListItemText className={classes.listText} classes={{ secondary: selectedIndex === 3? classes.whiteColor: classes.grayColor }} secondary="عنوان رابع"/>
             <ListItemIcon className={classes.iconContainer}>
-              <img className='icon' src={selectedIndex === 4 ? men4active: men4} />
+              <img className='icon' src={selectedIndex === 3 ? men4active: men4} />
             </ListItemIcon>
           </ListItem>
         </List>
@@ -106,12 +106,23 @@ function Header() {
       </div>
     </Desktop>
     <Tablet>
-      <div className='header'>
-
+      <div className='header-tablet'>
+        <img src={alert} className='alert' />
+        <img src={logo} />
+        <img src={menue} className='menue' />
       </div>
     </Tablet>
     <Mobile>
-      <div className='header'>
+      <div className='header-mobile-container'>
+        <div className='header-mobile'>
+          <img src={alert} className='alert-small' />
+          <img src={logo} className='logo-small'/>
+          <img src={menue} className='menue-small' />
+        </div>
+        <div className='search-container'>
+          <img src={search} className='search' />
+          <p className='search-text'>بحث</p>
+        </div>
 
       </div>
     </Mobile>
