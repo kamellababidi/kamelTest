@@ -27,13 +27,13 @@ function SearchBar() {
                 <div className='search-bar-input-container'>
                     <label for="name" className='search-bar-input-label'>يبدأ في</label>
                     <div className='search-bar-field-container'>
-                        <CusSelect items={[{value: "asdsa"}]}/>
+                        <CusDatePicker/>
                     </div>
                 </div>
                 <div className='search-bar-input-container'>
                     <label for="name" className='search-bar-input-label'>كلمة</label>
                     <div className='search-bar-field-container'>
-                        <CusSelect items={[{value: "asdsa"}]}/>
+                        <CusSelect items={[{value: "قائمة منسدلة"}, {value: "قائمة منسدلة"}, {value: "قائمة منسدلة"}]}/>
                     </div>
                 </div>
                 <div className='search-bar-input-container'>
