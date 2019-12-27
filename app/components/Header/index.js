@@ -13,6 +13,7 @@ import men4 from '../../images/ic_menu4.svg'
 import men4active from '../../images/ic_menu4_active.svg'
 import alert from '../../images/ic_alert.svg'
 import menue from '../../images/ic_menu.svg'
+import close from '../../images/ic_close.svg'
 import search from '../../images/ic_search.svg'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -36,6 +37,7 @@ const Mobile = ({ children }) => {
 function Header() {
   const classes = useStyles();
   const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [open, setOpen] = React.useState(false)
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
@@ -45,7 +47,7 @@ function Header() {
   <div>
     <Desktop>
       <div className='header-desktop'>
-        <img src={logo} />
+        <img style={{width: 130}} src={logo} />
         <div className='avatar-container'>
           <img className='avatar' src={avatar} />
           <p className='avatar-text'>الاسم</p>
@@ -109,7 +111,7 @@ function Header() {
       <div className='header-tablet'>
         <img src={alert} className='alert' />
         <img src={logo} />
-        <img src={menue} className='menue' />
+        <img src={open? close: menue} className='menue' onClick={() => setOpen(!open)} />
       </div>
     </Tablet>
     <Mobile>
@@ -117,7 +119,7 @@ function Header() {
         <div className='header-mobile'>
           <img src={alert} className='alert-small' />
           <img src={logo} className='logo-small'/>
-          <img src={menue} className='menue-small' />
+          <img src={open? close: menue} className='menue-small' onClick={() => setOpen(!open)} />
         </div>
         <div className='search-container'>
           <img src={search} className='search' />

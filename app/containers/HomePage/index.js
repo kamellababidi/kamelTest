@@ -7,7 +7,6 @@
 import React, { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
@@ -20,6 +19,7 @@ import {
   makeSelectError,
 } from 'containers/App/selectors';
 import Header from 'components/Header';
+import ColoredLine from 'components/ColoredLine';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
@@ -28,31 +28,16 @@ import saga from './saga';
 import './_home.css';
 const key = 'home';
 
-export function HomePage({
-  username,
-  loading,
-  error,
-  repos,
-  onSubmitForm,
-  onChangeUsername,
-}) {
-  useInjectReducer({ key, reducer });
-  useInjectSaga({ key, saga });
+export function HomePage() {
 
-  useEffect(() => {
-    // When initial state username is not null, submit the form to load repos
-    if (username && username.trim().length > 0) onSubmitForm();
-  }, []);
 
-  const reposListProps = {
-    loading,
-    error,
-    repos,
-  };
 
   return (
     <Container className='container' fluid={true}>
       <Header/>
+      <div className='content-container'>
+        <ColoredLine/>
+      </div>
     </Container>
   );
 }
