@@ -1,0 +1,30 @@
+
+.sub_header-container {
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-header-title-container {
+    margin-right: 15px;
+}
+
+.sub-header-title-container .title {
+    color: #616161;
+    font-size: 25px;
+}
+
+.sub-header-search-container {
+    margin-left: 15px;  
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-header-search-container .select-container {
+    margin-left: 15px;
+}
+
+.sub-header-search-container .alert {
+    width: 20px;
+}
