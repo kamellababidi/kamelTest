@@ -15,10 +15,6 @@ const styles = theme => ({
         paddingRight: 22,
         fontSize: 14,
     },
-    kamel: {
-        disableUnderline: true,
-
-    }
   });
 
 function CusDatePicker({ classes, ...rest }) {
@@ -32,8 +28,7 @@ function CusDatePicker({ classes, ...rest }) {
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <KeyboardDatePicker
           disableToolbar
-          InputProps={{ className: classes.input }}
-          style={{ className: classes.kamel }}
+          InputProps={{ className: classes.input, disableUnderline: true, }}
           variant="inline"
           className='kamel'
           format="MM/dd/yyyy"

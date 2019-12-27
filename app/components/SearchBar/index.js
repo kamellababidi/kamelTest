@@ -19,7 +19,7 @@ function SearchBar() {
             </Col>
             <Col className='search-bar-right'>
                 <div className='search-bar-input-container'>
-                    <label for="name" className='search-bar-input-label'>يبدأ في</label>
+                    <label for="name" className='search-bar-input-label'>ينتهي في</label>
                     <div className='search-bar-field-container'>
                         <CusDatePicker/>
                     </div>
@@ -37,7 +37,7 @@ function SearchBar() {
                     </div>
                 </div>
                 <div className='search-bar-input-container'>
-                    <label for="name" className='search-bar-input-label'>العنوان</label>
+                    <label for="name" className='search-bar-input-label longer'>العنوان</label>
                     <input className='search-bar-input' id="name" type="text" name="name"/>
                 </div>
             </Col>

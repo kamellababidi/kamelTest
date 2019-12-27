@@ -16,7 +16,7 @@
 }
 
 .search-bar-container .search-bar-right {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     margin-right: 15px;
 }
@@ -84,4 +84,13 @@
     background-color: #ffffff;
     border: 0.5px solid #dedede;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+    .search-bar-container .search-bar-right {
+        display: none;
+    }
+    .search-bar-container .search-bar-left {
+        display: none;
+    }
 }
