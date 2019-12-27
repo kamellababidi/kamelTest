@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import SubHeader from 'components/SubHeader';
 import ColoredLine from 'components/ColoredLine';
 import SearchBar from 'components/SearchBar';
+import Content from 'components/Content';
 import './_home.css';
 
 export function HomePage() {
@@ -16,6 +17,7 @@ export function HomePage() {
         <ColoredLine/>
         <SubHeader/>
         <SearchBar/>
+        <Content/>
       </div>
     </Container>
   );
