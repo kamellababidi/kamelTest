@@ -17,14 +17,14 @@ const styles = theme => ({
   },
   root: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   formControl: {
     // margin: theme.spacing.unit,
     minWidth: 120,
   },
   selectEmpty: {
-    marginTop: theme.spacing.unit * 2,
+    // marginTop: theme.spacing.unit * 2,
   },
   label: {
       marginLeft: 30
@@ -66,28 +66,30 @@ class CusSelect extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <form className={classes.root} autoComplete="off">
-        <FormControl className={classes.formControl}>
-          {this.props.label && <InputLabel className={classes.label} htmlFor="age-simple">{this.props.labelText}</InputLabel>}
-          <Select
-            className={classes.value}
-            disableUnderline={true}
-            value={this.state.index}
-            onChange={this.handleChange}
-            inputProps={{
-              name: "index",
-              id: "age-simple"
-            }}
-            IconComponent={CustomExpandMore}
-          >
-            {
-                this.props.items.map((item, index) => (
-                    <MenuItem value={index}>{item.value}</MenuItem>
-                ))
-            }
-          </Select>
-        </FormControl>
-      </form>
+      <div className='cus-select-container'>
+        <form className={classes.root} autoComplete="off">
+          <FormControl className={classes.formControl}>
+            {this.props.label && <InputLabel className={classes.label} htmlFor="age-simple">{this.props.labelText}</InputLabel>}
+            <Select
+              className={classes.value}
+              disableUnderline={true}
+              value={this.state.index}
+              onChange={this.handleChange}
+              inputProps={{
+                name: "index",
+                id: "age-simple"
+              }}
+              IconComponent={CustomExpandMore}
+            >
+              {
+                  this.props.items.map((item, index) => (
+                      <MenuItem value={index}>{item.value}</MenuItem>
+                  ))
+              }
+            </Select>
+          </FormControl>
+        </form>
+      </div>
     );
   }
 }
