@@ -2,9 +2,3 @@
     width: 120px;
     direction:RTL;
 }
-
-@media only screen and (max-width: 767px) {
-    .kamel {
-        /* width: 200px;  */
-    }
-}
