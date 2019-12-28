@@ -20,6 +20,14 @@ module.exports = options => ({
   module: {
     rules: [
       {
+        test: /\.jsx?$/, // Transform all .js and .jsx files required somewhere with Babel
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: options.babelQuery,
+        },
+      },
+      {
         // Preprocess our own .css files
         // This is the place to add your own loaders (e.g. sass/less etc.)
         // for a list of loaders, see https://webpack.js.org/loaders/#styling

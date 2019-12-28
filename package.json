@@ -113,9 +113,7 @@
     "html-webpack-plugin": "3.2.0",
     "circular-dependency-plugin": "5.0.2",
     "compare-versions": "3.4.0",
-    "compression-webpack-plugin": "2.0.0"
-  },
-  "devDependencies": {
+    "compression-webpack-plugin": "2.0.0",
     "@babel/cli": "7.4.3",
     "@babel/core": "latest",
     "@babel/plugin-proposal-class-properties": "7.4.0",
@@ -175,5 +173,8 @@
     "terser-webpack-plugin": "1.2.3",
     "url-loader": "1.1.2",
     "whatwg-fetch": "3.0.0"
+  },
+  "devDependencies": {
+    
   }
 }
