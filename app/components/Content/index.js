@@ -27,7 +27,7 @@ function Content({ classes, ...rest }) {
         </div>
         <div className='table-content-container'>
             <div className='pagenation-container'>
-                <div id='page-active' className='page'>
+                <div className='page'>
                     1
                 </div>
                 <div className='page'>

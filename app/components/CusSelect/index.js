@@ -11,23 +11,25 @@ import './_cus_select.css';
 
 const styles = theme => ({
   value: {
-      paddingLeft: 25,
+      // paddingLeft: 25,
+      // padding: 1,
       color: '#828282',
-      fontSize: 15
+      fontSize: 13,
+      // borderRadius: 10
   },
   root: {
     display: "flex",
     flexWrap: "wrap",
+
   },
   formControl: {
     // margin: theme.spacing.unit,
     minWidth: 120,
   },
   selectEmpty: {
-    // marginTop: theme.spacing.unit * 2,
   },
   label: {
-      marginLeft: 30
+      // marginLeft: 25
   },
   focused: {
   },
@@ -38,7 +40,8 @@ const iconStyles = {
   selectIcon: {
     color: "#03a1fc",
     fill: '#03a1fc',
-    left: 0
+    left: 0,
+    marginRight: 75
   }
 };
 const CustomExpandMore = withStyles(iconStyles)(
@@ -68,7 +71,7 @@ class CusSelect extends React.Component {
     return (
       <div className='cus-select-container'>
         <form className={classes.root} autoComplete="off">
-          <FormControl className={classes.formControl}>
+          <FormControl className={classes.formControl} dir="rtl">
             {this.props.label && <InputLabel className={classes.label} htmlFor="age-simple">{this.props.labelText}</InputLabel>}
             <Select
               className={classes.value}
