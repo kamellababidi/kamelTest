@@ -1,116 +1,57 @@
 import 'date-fns';
-import React from 'react';
+import React, {useState} from 'react';
 import './_content.css';
 import CusSelect from '../CusSelect'
 import CusDatePicker from '../cusDatePicker'
 import Switch from '@material-ui/core/Switch';
 
 function Content({ classes, ...rest }) {
+  const [pageOnLoad, sePpageOnLoad] = useState(true);
+  const [tabOnLoad, seTabOnLoad] = useState(true);
+
+  const handlePageChange = (event) => {
+    sePpageOnLoad(false)
+  }
+
+  const handleTabChange = (event) => {
+    seTabOnLoad(false)
+  }
   return (
     <div className='table-container'>
         <div className='tab-container'>
-            <div id='tab-active' className='tab'>
-                تبويب1
-            </div>
-            <div className='tab'>
-                تبويب2
-            </div>
-            <div className='tab'>
-                تبويب3
-            </div>
-            <div className='tab'>
-                تبويب4
-            </div>
-            <div className='tab'>
-                تبويب5
-            </div>
+            <input type="radio" name="tGroup" value={1} id={"t"+1} onClick={handleTabChange} />
+            <label className={"tab" + (tabOnLoad? " tab-active" : "")} for={"t"+1}>{"تبويب1"}</label>
+
+            <input type="radio" name="tGroup" value={2} id={"t"+2} onClick={handleTabChange} />
+            <label className={"tab"} for={"t"+2}>{"تبويب2"}</label>
+
+            <input type="radio" name="tGroup" value={3} id={"t"+3} onClick={handleTabChange} />
+            <label className={"tab"} for={"t"+3}>{"تبويب3"}</label>
+
+            <input type="radio" name="tGroup" value={4} id={"t"+4} onClick={handleTabChange} />
+            <label className={"tab"} for={"t"+4}>{"تبويب4"}</label>
+
+            <input type="radio" name="tGroup" value={5} id={"t"+5} onClick={handleTabChange} />
+            <label className={"tab"} for={"t"+5}>{"تبويب5"}</label>
         </div>
         <div className='table-content-container'>
             <div className='pagenation-container'>
-                <div className='page'>
-                    1
+                <div>
+                    <input type="radio" name="rGroup" value={1} id={"r"+1} onClick={handlePageChange} />
+                    <label className={"page" + (pageOnLoad? " page-selected" : "")} for={"r"+1}>{1}</label>
                 </div>
-                <div className='page'>
-                    2
-                </div>
-                <div className='page'>
-                    3
-                </div>
-                <div className='page'>
-                    4
-                </div>
-                <div className='page'>
-                    5
-                </div>
-                <div className='page'>
-                    6
-                </div>
-                <div className='page'>
-                    7
-                </div>
-                <div className='page'>
-                    8
-                </div>
-                <div className='page'>
-                    9
-                </div>
-                <div className='page'>
-                    10
-                </div>
-                <div className='page'>
-                    11
-                </div>
-                <div className='page'>
-                    12
-                </div>
-                <div className='page'>
-                    13
-                </div>
-                <div className='page'>
-                    14
-                </div>
-                <div className='page'>
-                    15
-                </div>
-                <div className='page'>
-                    16
-                </div>
-                <div className='page'>
-                    17
-                </div>
-                <div className='page'>
-                    18
-                </div>
-                <div className='page'>
-                    19
-                </div>
-                <div className='page'>
-                    20
-                </div>
-                <div className='page'>
-                    21
-                </div>
-                <div className='page'>
-                    22
-                </div>
-                <div className='page'>
-                    23
-                </div>
-                <div className='page'>
-                    24
-                </div>
-                <div className='page'>
-                    25
-                </div>
-                <div className='page'>
-                    26
-                </div>
-                <div className='page'>
-                    27
-                </div>
-                <div className='page'>
-                    28
-                </div>
+                {[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24].map((index) => {
+                    return(
+                        <div>
+                            <input type="radio" name="rGroup" value={index} id={"r"+index} onClick={handlePageChange} />
+                            <label className={"page"} for={"r"+index}>{index}</label>
+                        </div>
+                    )
+                })}
+                
+                
+
+                
             </div>
             {detailRow()}
             {detailRow()}

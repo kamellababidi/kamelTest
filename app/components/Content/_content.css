@@ -30,7 +30,7 @@
     color: black;
 }
 
-#tab-active {
+.tab-active {
     background-color: #ffffff;
     color: black;
 }
@@ -120,4 +120,23 @@
     .details-row {
         flex-direction: column;
     }
+}
+
+
+.pagenation-container input[type=radio] {
+    display: none;
+}
+
+.pagenation-container input[type=radio]:checked + .page {
+    border: 2px solid #03a1fc; 
+}
+
+
+.tab-container input[type=radio] {
+    display: none;
+}
+
+.tab-container input[type=radio]:checked + .tab {
+    background-color: #ffffff;
+    color: black;
 }
