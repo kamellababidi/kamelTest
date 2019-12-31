@@ -82,13 +82,13 @@
 }
 
 .menue {
-    width: 50px;
+    width: 40px;
     margin-right: 20px;
 }
 
 .alert {
     margin-left: 20px;
-    width: 40px;
+    width: 30px;
 }
 
 .menue-small {
@@ -103,6 +103,10 @@
 
 .logo-small {
     width: 80px;
+}
+
+.logo-big {
+    width: 110px;
 }
 
 .search {

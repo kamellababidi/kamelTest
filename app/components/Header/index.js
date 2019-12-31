@@ -110,7 +110,7 @@ function Header() {
     <Tablet>
       <div className='header-tablet'>
         <img src={alert} className='alert' />
-        <img src={logo} />
+        <img src={logo}  className='logo-big'/>
         <img src={open? close: menue} className='menue' onClick={() => setOpen(!open)} />
       </div>
     </Tablet>
