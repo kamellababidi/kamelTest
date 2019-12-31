@@ -12,6 +12,7 @@
     margin-right: 15px;
     height: 40px;
     align-items: center;
+
 }
 
 .tab {
@@ -39,6 +40,7 @@
     background-color: #ffffff;
     border-radius: 5px;
     padding-top: 5px;
+    padding-bottom: 40px;
 }
 
 .pagenation-container {
@@ -115,6 +117,8 @@
     direction: LTR;
 }
 
+.detail-text-underline-container {
+}
 
 @media only screen and (max-width: 550px) {
     .details-row {
@@ -125,6 +129,10 @@
 @media only screen and (max-width: 991px) {
     .pagenation-container {
         display: flex;
+    }
+
+    .table-container {
+        width: 100%;
     }
 }
 
