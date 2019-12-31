@@ -22,10 +22,6 @@ const styles = theme => ({
     flexWrap: "wrap",
 
   },
-  formControl: {
-    // margin: theme.spacing.unit,
-    minWidth: 120,
-  },
   selectEmpty: {
   },
   label: {
@@ -71,7 +67,7 @@ class CusSelect extends React.Component {
     return (
       <div className='cus-select-container'>
         <form className={classes.root} autoComplete="off">
-          <FormControl className={classes.formControl} dir="rtl">
+          <FormControl className='formControl' dir="rtl">
             {this.props.label && <InputLabel className={classes.label} htmlFor="age-simple">{this.props.labelText}</InputLabel>}
             <Select
               className={classes.value}
